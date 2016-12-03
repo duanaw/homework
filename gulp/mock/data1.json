@@ -1,0 +1,33 @@
+[
+	{
+		"width":480,
+		"height":240,
+		"src":"img/1.jpg"
+	},
+	{
+		"width":480,
+		"height":240,
+		"src":"img/2.jpg"
+	},
+	{
+		"width":480,
+		"height":240,
+		"src":"img/3.jpg"
+	},
+	{
+		"width":480,
+		"height":240,
+		"src":"img/4.jpg"
+	},
+	{
+		"width":480,
+		"height":240,
+		"src":"img/5.jpg"
+	},
+	{
+		"width":480,
+		"height":240,
+		"src":"img/6.jpg"
+	}
+
+]

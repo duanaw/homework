@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./prd/styles/app.css">
+</head>
+<body>
+    <div ng-controller="myController" class="search">
+        <span>模糊匹配</span>
+        <p>
+            <input type="text" ng-model="searchText">
+        </p>
+        <table border="0">
+            <thead>
+                <tr>
+                    <td>ID</td>
+                    <td>name</td>
+                    <td>phone</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="f in fiends | filter:search:value"> <!-- filter:searchText:true完全匹配 filter:searchText 模糊匹配-->
+                    <td>{{$index+1}}</td>
+                    <td>{{f.name}}</td>
+                    <td>{{f.phone}}</td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+<script src="./libs/angular.min.js"></script>
+    <script src="./libs/jquery-1.11.1.min.js"></script>
+<script src="./prd/scripts/app.js"></script>
+</body>
+</html>

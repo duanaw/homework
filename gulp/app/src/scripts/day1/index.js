@@ -1,0 +1,18 @@
+angular.module("myApp",[])
+.controller("demos",["$scope",function($scope){
+    $scope.price=99;
+    $scope.cunter=1;
+    $scope.addItem=function(){
+        $scope.cunter++;
+        if($scope.cunter>10){
+            alert("最多选10件")
+            $scope.cunter=10;
+        }
+    }
+    $scope.removeItem=function(){
+        $scope.cunter--;
+        if($scope.cunter<0){
+            $scope.cunter=0;
+        }
+    }
+}])

@@ -1,0 +1,67 @@
+@import "./commes/reset";
+body{
+
+  color: $text;
+}
+.title{
+  color: red;
+}
+.disable{
+  color: #ccc;
+  text-decoration: line-through;
+}
+.enable{
+  color: #00cc33;
+}
+/*.search{
+  padding: 10px;
+  font-size: 14px;
+  input{
+    width: 200px;
+    height: 25px;font-size: 14px;
+  }
+  table{
+    width: 100%;
+    border-collapse: collapse;
+    thead{
+      td{
+       font-weight: bold;
+        font-size: 16px;
+      }
+    }
+    td{
+      border: 1px solid #ccc;
+      text-align: center;
+      padding: 5px 3px;
+      color: lightpink;
+    }
+  }
+}*/
+.searchFirst{
+  padding: 10px;
+  font-size: 14px;
+}
+table{
+  width: 100%;
+  border-collapse: collapse;
+  thead{
+    td{
+      font-weight: bold;
+      font-size: 16px;
+      .add{
+        float: right;
+        width: 0px;
+        height: 0px;
+        border: 6px solid transparent;
+        border-top: 10px solid #000;
+        margin: 3px 3px;
+      }
+    }
+  }
+  td{
+    border: 1px solid #ccc;
+    text-align: center;
+    padding: 5px 3px;
+    color: #623cff;
+  }
+}

@@ -65,3 +65,19 @@ table{
     color: #623cff;
   }
 }
+.on{
+  color: #d789ff;
+}
+.addtop{
+  float: right;
+  border:6px solid transparent;
+
+  border-bottom: 10px solid #000;
+}
+
+.addbottom{
+  float: right;
+  border:6px solid transparent;
+  border-top: 10px solid #000;
+  margin-top:5px;
+}

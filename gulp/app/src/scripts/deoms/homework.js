@@ -36,6 +36,21 @@ angular.module("myApp",[])
             Birthday:"1968-03-22"
         }
     ];
+    $scope.title=[
+        {
+            id:0, title:"FirstName"
+        },{
+            id:1, title:"LastName"
+        },{
+            id:2, title:"Gender"
+        },{
+            id:3, title:"Salary1"
+        },{
+            id:4, title:"Salary"
+        },{
+            id:5, title:"Birthday"
+        }];
+
     $scope.search = search;
     $scope.searchText="";
     $scope.searchTxt="";
@@ -61,10 +76,32 @@ angular.module("myApp",[])
             return true;
         }
     }
-    $scope.isShow=false;
-    $scope.title = 'FirstName';
-    $scope.desc = 0;
-    $scope.add=function(){
-        $scope.isShow=true;
-    }
+
+    $scope.index=0;
+    $scope.oder=false;
+    //点击
+    $scope.oncl=function(x,i,value){
+        $scope.addname=x;
+        if($scope.index==value.id){
+            $scope.oder=!$scope.oder;
+        }else{
+            $scope.oder=false;
+        }
+        $scope.index=i;
+    };
+//排序
+    $scope.auto=function(){
+        if(!$scope.oder){
+            return "-"+$scope.addname
+        }else{
+            return $scope.addname
+        }
+    };
+    //显示隐藏
+    $scope.cl=function(x){
+        return this.addname===x;
+    };
 }])
+
+
+

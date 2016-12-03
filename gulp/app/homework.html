@@ -17,17 +17,13 @@
 
        <table border="0">
            <thead>
-           <tr>
-               <td ng-click="title='FirstName'; desc=!desc;add()">FirstName <span></span></td>
-               <td ng-click="title='LastName'; desc=!desc;add()">LastName <span ng-show="isShow"></span></td>
-               <td ng-click="title='Gender'; desc=!desc;add()">Gender <span ng-show="isShow"></span></td>
-               <td ng-click="title='Salary1'; desc=!desc;add()">Salary1 <span ng-show="isShow"></span></td>
-               <td ng-click="title='Salary'; desc=!desc;add()">Salary <span ng-show="isShow"></span></td>
-               <td ng-click="title='Birthday'; desc=!desc;add()">Birthday <span ng-show="isShow"></span></td>
-           </tr>
+           <td ng-repeat="x in title" ng-click="oncl(x.title,$index,x)"  ng-class="{'on':cl(x.title)}" >
+               <span>{{x.title}}</span>
+               <i ng-if="cl(x.title)" ng-class="{true:'addtop',false:'addbottom'}[oder]"></i>
+           </td>
            </thead>
            <tbody>
-           <tr ng-repeat="s in search  | filter:seaFirst:value | filter:seaLast:value  |  orderBy: title : desc"> <!-- filter:searchText:true完全匹配 filter:searchText 模糊匹配-->
+           <tr ng-repeat="s in search  | filter:seaFirst:value | filter:seaLast:value  | orderBy:auto()"> <!-- filter:searchText:true完全匹配 filter:searchText 模糊匹配-->
                <td>{{s.FirstName}}</td>
                <td>{{s.LastName}}</td>
                <td>{{s.Gender}}</td>
@@ -35,10 +31,10 @@
                <td>{{s.Salary}}</td>
                <td>{{s.Birthday | date:"yyyy-MM-dd"}}</td>
            </tr>
-
            </tbody>
        </table>
    </div>
+
 <script src="./libs/angular.min.js"></script>
 <script src="./prd/scripts/app.js"></script>
 </body>

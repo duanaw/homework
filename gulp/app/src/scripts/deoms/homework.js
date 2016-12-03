@@ -61,10 +61,10 @@ angular.module("myApp",[])
             return true;
         }
     }
-    $scope.ishide=false;
+    $scope.isShow=false;
     $scope.title = 'FirstName';
     $scope.desc = 0;
     $scope.add=function(){
-
+        $scope.isShow=true;
     }
 }])

@@ -18,13 +18,12 @@
        <table border="0">
            <thead>
            <tr>
-               <td ng-click="title='FirstName'; desc=!desc;add()">FirstName <span ng-class="add"></span></td>
-               <td ng-click="title='LastName'; desc=!desc;add()">LastName <span ng-class="add"></span></td>
-               <td ng-click="title='Gender'; desc=!desc;add()">Gender <span ng-class="add"></span></td>
-               <td ng-click="title='Salary1'; desc=!desc;add()">Salary1 <span ng-class="add"></span></td>
-               <td ng-click="title='Salary'; desc=!desc;add()">Salary <span ng-class="add"></span></td>
-               <td ng-click="title='Birthday'; desc=!desc;add()">Birthday <span ng-class="add"></span></td>
-
+               <td ng-click="title='FirstName'; desc=!desc;add()">FirstName <span></span></td>
+               <td ng-click="title='LastName'; desc=!desc;add()">LastName <span ng-show="isShow"></span></td>
+               <td ng-click="title='Gender'; desc=!desc;add()">Gender <span ng-show="isShow"></span></td>
+               <td ng-click="title='Salary1'; desc=!desc;add()">Salary1 <span ng-show="isShow"></span></td>
+               <td ng-click="title='Salary'; desc=!desc;add()">Salary <span ng-show="isShow"></span></td>
+               <td ng-click="title='Birthday'; desc=!desc;add()">Birthday <span ng-show="isShow"></span></td>
            </tr>
            </thead>
            <tbody>

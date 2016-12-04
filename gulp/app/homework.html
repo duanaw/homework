@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./prd/styles/app.css">
 </head>
 <body>
-   <div ng-controller="homes" class="searchFirst">
+  <!-- <div ng-controller="homes" class="searchFirst">
        <p>
            <input type="text" placeholder="search firstName" ng-model="searchText">
            <input type="text" placeholder="search lastName" ng-model="searchTxt">
@@ -23,7 +23,7 @@
            </td>
            </thead>
            <tbody>
-           <tr ng-repeat="s in search  | filter:seaFirst:value | filter:seaLast:value  | orderBy:auto()"> <!-- filter:searchText:true完全匹配 filter:searchText 模糊匹配-->
+           <tr ng-repeat="s in search  | filter:seaFirst:value | filter:seaLast:value  | orderBy:auto()"> &lt;!&ndash; filter:searchText:true完全匹配 filter:searchText 模糊匹配&ndash;&gt;
                <td>{{s.FirstName}}</td>
                <td>{{s.LastName}}</td>
                <td>{{s.Gender}}</td>
@@ -33,7 +33,54 @@
            </tr>
            </tbody>
        </table>
-   </div>
+   </div>-->
+  <div ng-controller="homes" class="searchFirst">
+      <p>
+          <input type="text" placeholder="search firstName" ng-model="searchText">
+          <input type="text" placeholder="search lastName" ng-model="searchTxt">
+      </p>
+
+      <table border="0">
+          <thead>
+          <tr>
+              <td ng-click="setSort('FirstName')">
+                  FirstName
+                  <span ng-class="getClass('FirstName')"></span>
+              </td>
+              <td ng-click="setSort('LastName')">
+                  LastName
+                  <span ng-class="getClass('LastName')"></span>
+              </td>
+              <td ng-click="setSort('Gender')">
+                  Gender
+                  <span ng-class="getClass('Gender')"></span>
+              </td>
+              <td ng-click="setSort('Salary1')">
+                  Salary1
+                  <span ng-class="getClass('Salary1')"></span>
+              </td>
+              <td ng-click="setSort('Salary')">
+                  Salary
+                  <span ng-class="getClass('Salary')"></span>
+              </td>
+              <td ng-click="setSort('Birthday')">
+                  Birthday
+                  <span ng-class="getClass('Birthday')"></span>
+              </td>
+          </tr>
+          </thead>
+          <tbody>
+          <tr ng-repeat="s in search  | filter:seaFirst:value | filter:seaLast:value | orderBy:sortColum:reverseSort">
+              <td>{{s.FirstName}}</td>
+              <td>{{s.LastName}}</td>
+              <td>{{s.Gender}}</td>
+              <td>{{s.Salary1}}</td>
+              <td>{{s.Salary}}</td>
+              <td>{{s.Birthday | date:"yyyy-MM-dd"}}</td>
+          </tr>
+          </tbody>
+      </table>
+  </div>
 
 <script src="./libs/angular.min.js"></script>
 <script src="./prd/scripts/app.js"></script>

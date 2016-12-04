@@ -48,14 +48,19 @@ table{
     td{
       font-weight: bold;
       font-size: 16px;
-      /*span{
+      .up{
         float: right;
-        width: 0px;
-        height: 0px;
-        border: 6px solid transparent;
+        border:6px solid transparent;
+
+        border-bottom: 10px solid #000;
+      }
+
+      .down{
+        float: right;
+        border:6px solid transparent;
         border-top: 10px solid #000;
-        margin: 3px 3px;
-      }*/
+        margin-top:5px;
+      }
     }
   }
   td{
@@ -68,16 +73,4 @@ table{
 .on{
   color: #d789ff;
 }
-.addtop{
-  float: right;
-  border:6px solid transparent;
 
-  border-bottom: 10px solid #000;
-}
-
-.addbottom{
-  float: right;
-  border:6px solid transparent;
-  border-top: 10px solid #000;
-  margin-top:5px;
-}
